@@ -74,7 +74,7 @@ Person.prototype.toString = function(){
 
 function Car(model, milesPerGallon) {
   this.model = model; 
-  this.mpg = milesPerGallon;
+  this.milesPerGallon = milesPerGallon;
   this.tank = 0; 
   this.odometer = 0;
 };
@@ -112,10 +112,19 @@ Baby.prototype.play = function(){
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+
+  1. Window/ Global Binding: When working in the global scope this will point to/ default to the window. In strict mode a `this` that is binded to the window will return undefined. 
+  
+  2. Implicit Binding: The most common use case for `this`. Applies to an object with method; when the method is invoked it looks to the object left of the `.`.
+  
+  3. Explicit Binding: Used to explicitly tell a function what `this` should bind to via: 
+      - Call: will immediatly invoke the function, need to pass aguments in one by on 
+      - Apply: Also immediatley invokes the function, pass arguments via an array 
+      - Bind: Does not immediatly invoke the function, instead it returns a brand new function that you can choose to invoke later. Arguments are passed in one by one. 
+  
+  4. New Binding: `this` is originally introduced in a Construct Index, then when we construct new objects using the `new` keyword which in turns tell `this` to point our newly created object. 
+
+
 */
 
 
